@@ -1,0 +1,36 @@
+{%extends 'base.html'%}
+
+{%block title%} Welcome to NewsPortal {%endblock%}
+
+{%block content%} 
+
+<div class="container" style="color: rgb(180, 13, 13);">
+
+
+    <h4><b>{{cat.title}}</b></h4><br>
+
+
+    <div class="img-container center-align" >
+
+      <img src="/media/{{cat.image}}" class="responsive-img"style="height:500px;" alt=" ">
+
+    </div><br>
+
+    <div class="collection">
+        {%for p in posts %}
+       <h6> <a href="/newsapp/{{p.url}}" class="collection-item" style="color: rgba(238, 8, 8, 0.986);border: rgb(1, 1, 61);">{{p.post_title}}</a></h6>
+
+       
+        {%endfor%}
+   </div>
+    <div class="class">
+    
+      <h5><b> <p style="color: black;"><i>{{cat.description |safe}}</p></i></b></h5>
+
+    </div>  
+            
+ 
+
+</div>
+
+{%endblock%}

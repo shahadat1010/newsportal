@@ -1,0 +1,19 @@
+body{
+    background-color:white;
+}
+
+.bg-primary{
+    background-color:rgb(19, 19, 133);
+}
+
+.mt20{
+    margin-top: 20px;
+}
+.container-custom{
+    width: 50%!important;
+    margin:auto;
+}
+
+
+    
+

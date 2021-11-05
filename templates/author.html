@@ -1,0 +1,56 @@
+{%extends 'base.html'%}
+
+{%block title%} Welcome to NewsPortal {%endblock%}
+
+{%block content%} 
+
+{%load static %}
+
+<div class=" ">
+  <div class="image  center">
+    
+    <div class="responsive">
+        <div class="center-align ">
+          <a target="_blank" href="/static/online_news.jpg">
+            <img src="/static/online_news.jpg"  alt=" " width="90%" height="700px"><br>
+          </a>
+          
+        </div>
+      </div>
+
+
+<br>
+
+<div class="container">
+
+          {%for author in authors %}
+
+              <h3 class="mt-2" style="text-align:center;">{{author.display_name}}</h3>
+              
+              <div class="img-container mt-2">
+
+                   <img src="/media/{{author.profile_picture}}" class=" responsive-img mt20" width="60px" height="70px" >
+
+              </div>
+              <div class="mt-2">
+                  <h4 style="color: darkblue;">{{author.url}}</h4>
+              </div>
+              
+              <div class="mt-2 ">
+                    <p><b>{{author.blog|safe}}</b></p>    
+              </div>
+            
+          {%endfor%}
+
+        
+
+
+</div>
+
+
+
+{%endblock%}
+
+
+
+ 
